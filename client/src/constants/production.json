@@ -1,0 +1,22 @@
+{
+  "env": "production",
+  "host": "0.0.0.0",
+  "port": 3000,
+  "apiServerUrl": "http://localhost:5000",
+  "centralApiServerUrl": "https://prodapi.upgrad.com",
+  "careersApiServerUrl": "https://prodcareersapi.upgrad.com",
+  "cookieDomain": ".upgrad.com",
+  "authTokenKey": "upgrad-auth-token.production",
+  "spriteAwsDirectory": "prod",
+  "switches": {
+    "enableSampleFeature": false
+  },
+  "appKeys": {
+    "sampleApplicationKey": "abcdefg",
+    "googleApiKey": "AIzaSyAV_BSqA__DhqJnfvTG2R5mhcCZQqMiNL0"
+  },
+  "appPaths": {
+    "sampleAppPathUrl": "https://ik.imagekit.io/upgrad1/dev-nuxt-img",
+    "googleScriptLink": "https://maps.googleapis.com/maps/api/js?key=AIzaSyAV_BSqA__DhqJnfvTG2R5mhcCZQqMiNL0&libraries=places"
+  }
+}

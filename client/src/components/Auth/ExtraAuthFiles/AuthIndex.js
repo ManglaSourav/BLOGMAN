@@ -1,14 +1,31 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "./node_modules/react";
 import "./authIndex.css";
+import { withRouter } from "./node_modules/react-router-dom";
 
-export default function AuthIndex() {
-  // let rightPanel = false;
-  // function setPanel(bool) {
-  //   // e.preventDefault();
-  //   rightPanel = bool;
-  // }
+function AuthIndex(props) {
   const [rightPanel, setPanel] = useState(false);
+  const [newUser, setNewUser] = useState({
+    name: "",
+    email: "",
+    pass1: "",
+    pass2: ""
+  });
+  // const [name,setName] = useState("")
+  const [name, setName] = useState({ namee: "kjdbfek" });
+  //   const [email, setEmail] = useState("");
+  //   const [pass, setPass] = useState("");
+  //   const [pass2, setPass2] = useState("");
+  const [eUser, setEUser] = useState({ email: "jksbw", pass: "" });
 
+  useEffect(() => {
+    // setEUser({
+    //   ...eUser,
+    //   email: "sourav"
+    //   // pass: "kjndkw"
+    // });
+    setName({ ...name, namee: "Sourav" });
+    console.log(name);
+  }, [name]);
   return (
     <div>
       <div id='auth-root'>
@@ -30,9 +47,10 @@ export default function AuthIndex() {
                 </a>
               </div>
               <span>or use your email for registration</span>
-              <input type='text' placeholder='Name' />
-              <input type='email' placeholder='Email' />
-              <input type='password' placeholder='Password' />
+              <input type='text' placeholder='Name*' />
+              <input type='email' placeholder='Email*' />
+              <input type='password' placeholder='Password*' />
+              <input type='password' placeholder='Confirm Password*' />
               <button>Sign Up</button>
             </form>
           </div>
@@ -88,3 +106,5 @@ export default function AuthIndex() {
     </div>
   );
 }
+
+export default withRouter(AuthIndex);

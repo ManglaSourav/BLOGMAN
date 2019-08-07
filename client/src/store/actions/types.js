@@ -1,0 +1,18 @@
+export const GET_ERRORS = 'GET_ERRORS'
+export const CLEAR_ERRORS = 'CLEAR_ERRORS'
+export const SET_CURRENT_USER = 'SET_CURRENT_USER'
+
+
+const NS = "Auth";
+
+export const actionTypes = {
+    LOGIN_REQUEST: `${NS}/LOGIN_REQUEST`,
+    LOGIN: `${NS}/LOGIN`,
+    LOGIN_SUCCESS: `${NS}/LOGIN_SUCCESS`,
+    LOGIN_FAILIURE: `${NS}/LOGIN_FALIURE`,
+    LOGOUT: `${NS}/LOGOUT`,
+    REGISTER_FAILURE: `${NS}/REGISTER_FAILURE`,
+    REGISTER_SUCCESS: `${NS}/REGISTER_SUCCESS`,
+    IS_AUTH: `${NS}/IS_AUTH`,
+    IS_AUTH_FALSE: `${NS}/IS_AUTH_FALSE`
+};

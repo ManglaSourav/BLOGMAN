@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import "./index.css";
 import Navbar from "../common/Navbar";
-
+import { withRouter } from "react-router-dom";
 // pink color: #eea9a9
 // blue color: #c6e6e1
 // const aStyle = {
@@ -20,7 +20,7 @@ const Button = styled.a`
   font-weight: "bold";
 `;
 
-export default function index() {
+function Index(props) {
   return (
     <div>
       <header id='showcase'>
@@ -41,7 +41,9 @@ export default function index() {
               <p style={{ fontSize: "35px" }}>Starting A Blog Today.</p>
             </span>
           </div>
-          <Button className='button is-medium item3'>
+          <Button
+            className='button is-medium item3'
+            onClick={() => props.history.push("/register")}>
             {/* <a href=' ' style={aStyle} className='button is-medium item3'> */}
             <i className='fab fa-ravelry'> </i> &nbsp;Get started
             {/* </a> */}
@@ -51,3 +53,12 @@ export default function index() {
     </div>
   );
 }
+export default withRouter(Index);
+
+
+
+// const [rightPanel, setPanel] = useState(false);
+//   const [name, setName] = useState("");
+//   const [email, setEmail] = useState("");
+//   const [pass, setPass] = useState("");
+//   const [pass2, setPass2] = useState("");

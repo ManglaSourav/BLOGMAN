@@ -55,9 +55,9 @@
   padding-top: 14px;
 }
 
-.item3 {
-  margin-top: 8%;
-}
+/* .item3 {
+  margin-top: 5%;
+} */
 .item3:hover {
   background: #eea9a9;
   color: #c6e6e1;
